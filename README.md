@@ -19,11 +19,14 @@ It doesn't contain any graphical elements (no Gtk window or else). There is a sm
 
 ## player_minimal.py 
 
-Instead of a "full" pipeline, here it's just an example of some adapted code from [this page](http://codeboje.de/playing-mp3-stream-python/ ). It uses the "playbin" element which condenses all the elements from the player.py example into one automagic element.
+Instead of a "full" pipeline, here it's just an example of some adapted code from [this page](http://codeboje.de/playing-mp3-stream-python/ ). 
+
+It uses the "playbin" element which condenses all the elements from the player.py example into one automagic element.
 
 ## seek.py 
 
-Mainly a translation and simplification of [this code](http://codeboje.de/playing-mp3-stream-python/)
+Mainly a gst1.0 port and simplification of [this code](http://codeboje.de/playing-mp3-stream-python/).
+
 The simplest possible example of a sound player: a "Play" button, a "Pause" button, and a slider to control the playback position. It makes usage of controls signals to start at stop the element's playback state, and uses a Glib timer to check on the current position of the stream. When the slider is manually moved, it also makes use of the seek_simple() function to seek in the stream.
 
 You should probably use the [official doc](http://lazka.github.io/pgi-docs/index.html) as well as the [gstreamer1.0 porting tutorial](https://wiki.ubuntu.com/Novacut/GStreamer1.0) to start using the gstreamer1.0 API while feeding on gst0.10-based examples.

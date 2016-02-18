@@ -11,7 +11,7 @@ class Main:
     def __init__(self):
         self.mainloop = GObject.MainLoop()
         #Creating the gst pipeline we're going to add elements to and use to play the file
-        self.pipeline = Gst.Pipeline("mypipeline")
+        self.pipeline = Gst.Pipeline.new("mypipeline")
 
         #creating the filesrc element, and adding it to the pipeline
         self.filesrc = Gst.ElementFactory.make("filesrc", "filesrc")

@@ -12,6 +12,7 @@ mainloop = GObject.MainLoop()
 pl = Gst.ElementFactory.make("playbin", "player")
 # copy a track to /tmp directory, just for testing
 pl.set_property('uri','file://'+os.path.abspath('/tmp/track.ogg'))
+# setting the volume property for the playbin element, as an example
 pl.set_property('volume', 0.2)
 
 #running the playbin 
